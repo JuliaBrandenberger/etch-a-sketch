@@ -137,12 +137,15 @@ let populateGrid = function(number) {
     }
 }
 
-// selects the styles on the html element of document
-const htmlStyles = window.getComputedStyle(document.querySelector("html"));
-let sideSize = Number(htmlStyles.getPropertyValue("--side"));
-
-populateGrid(sideSize);
 
 
 
+window.addEventListener("load", function(){
+  // selects the styles on the html element of document
+  const htmlStyles = window.getComputedStyle(document.querySelector("html"));
+  
+  let sideSize = Number(htmlStyles.getPropertyValue("--side"));
+  populateGrid(sideSize);
+});
+// waits to run this function, which populates the squares, until after everything on the page is loaded
 
