@@ -1,0 +1,107 @@
+#container {
+  display: grid;
+  grid-template-rows: repeat(var(--side), 1fr);
+  grid-template-columns: repeat(var(--side), 1fr);
+  width: 500px;
+  height: 500px;
+  --box-shadow-color: rgb(4, 53, 4);
+  box-shadow: 1px 1px 5px 5px;
+  margin: 20px;
+}
+/* 1fr relative width, make everything 1fr the same width, so we divide width evenly between all side elements */
+
+.square {
+  background-color: #FBE7C6;
+  border: .5px darkgray solid; 
+}
+
+h1 {
+  color: #faf4f5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 3em;
+  font-weight: bold;
+  background-color: #FFAEBC;
+  border: solid 7px ;
+  padding: 20px;
+  padding-left: 50px;
+  border-radius: 100px;
+  background-image: url("paint.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10px;
+}
+
+h2 {
+  font-family: fantasy;
+  padding: 20px;
+  padding-left: 40px;
+}
+
+
+:root {
+  --side: 35;
+
+}
+/* root is an html element, it is the root of the document, we're setting a property
+on root called side, that we can reference in the css and javascript
+IT COULD HAVE also gone in container as a variable
+we just use it here so we can access it throughout the document
+other css classes that aren't descended from container can refernce side because it is in the root*/
+
+#legend {
+  background-color: #FBE7C6;
+  border: solid #ffffff 5px;
+  border-radius: 10px;
+}
+
+#legend button {
+  outline: none;
+  background-color: #A0E7E5;
+  color: #1d5806;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  border: solid white 2px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#legend button:hover {
+  background-color: #00fc0d;
+  border: solid #00fc0d 2px;
+  color: #ffffff;
+}
+
+
+
+.button-pairing {
+  background-color: rgb(216, 238, 117);
+}
+
+#mid-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#legend p {
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 10px 10px 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  color: #1c03f5;
+}
+
+body {
+  background-color: #d2fcfa;
+
+}
+
+#reset {
+  padding: 10px;
+}
